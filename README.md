@@ -39,12 +39,13 @@ A console-based expense tracker built using Python and MySQL to manage income, t
 ```
 expense-tracker/
 │
-├── main.py        # Main program (menu and user interaction)
-├── connect.py     # Database connection setup
-├── expense.py     # Expense-related functions
-├── income.py      # Income-related functions
-├── README.md      # Project documentation
-└── .gitignore     # Ignored files and folders
+├── main.py          # Main program (menu and user interaction)
+├── connect.py       # Database connection setup
+├── expense.py       # Expense-related functions
+├── income.py        # Income-related functions
+├── Schema_ET.sql    # SQL script to create database and tables
+├── README.md        # Project documentation
+└── .gitignore       # Ignored files and folders
 ```
 
 The project is structured in a modular way, separating database connection, business logic, and user interaction for better readability and maintainability.
@@ -60,6 +61,7 @@ The project is structured in a modular way, separating database connection, busi
 ---
 
 ## Database Design
+Full schema available in `Schema_ET.sql`.
 
 ### Income Table
 
@@ -75,7 +77,7 @@ The project is structured in a modular way, separating database connection, busi
 - "category"
 - "expense_date"
 - "description"
-
+  
 ---
 
 ## Sample Output
