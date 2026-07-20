@@ -1,6 +1,7 @@
 from connect import get_connection
 from expense import add_expense, view_expenses,get_total_expense,category_summary,monthly_summary,check_budget
 from income import add_income,view_income,get_total_income
+from expense import update_expense
 
 conn = get_connection("ExpenseTracker")
 
@@ -14,13 +15,14 @@ while True:
     print("6. Category Summary")
     print("7. Monthly Summary")
     print("8. Check Budget")
-    print("9. Exit")
+    print("9. Update expenses")
+    print("10. Exit")
 
     choice = input("Enter choice: ")
 
     if choice == "1":
         amount = float(input("Enter amount: "))
-        category = input("Enter category: ")
+        category = input("Enter category: ")  
         date = input("Enter date (YYYY-MM-DD): ")
         description = input("Enter description: ")
 
@@ -58,7 +60,16 @@ while True:
         check_budget(conn,budget)
 
     elif choice == "9":
+        expense_id = int(input("Enter Expense ID: "))
+        amount = float(input("Enter new amount: "))
+        category = input("Enter new category: ")
+        date = input("Enter new date (YYYY-MM-DD): ")
+        description = input("Enter new description: ")
+        update_expense(conn, expense_id, amount, category, date, description)
+
+    elif choice == "10":
         print("Exiting...")
+        print("Thank You!")
         break
 
     else:

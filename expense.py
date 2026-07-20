@@ -84,3 +84,22 @@ def check_budget(conn,budget):
         print("You are within your budget.")
 
     cursor.close()
+
+def update_expense(conn,expense_id,amount,category,date,description):
+    cursor = conn.cursor()
+
+    query = """
+    UPDATE Expense
+    SET amount = %s,
+        category = %s,
+        date = %s,
+        description = %s
+    WHERE id = %s
+    """
+
+    cursor.execute(query, (amount,category,date,description,expense_id))
+    conn.commit()
+
+    print("Expense updated successfully!")
+
+    cursor.close()
