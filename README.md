@@ -14,6 +14,9 @@ A console-based expense tracker built using Python and MySQL to manage income, t
 - Add expenses with category, date, and description
 - Store and manage all expense records in the database
 
+### Update Expenses
+- Update expenses with category, date, and description
+
 ### Category-wise Analysis
 - View total spending for each category (e.g., Food, Travel)
 - Helps identify where most money is being spent
@@ -91,7 +94,8 @@ Full schema available in `Schema_ET.sql`.
 6. Category Summary
 7. Monthly Summary
 8. Check Budget
-9. Exit
+9. Update Expenses
+10. Exit
 
 Enter your choice: 5
 
@@ -116,7 +120,7 @@ Balance: 4500
 
 ## Future Improvements
 
-- Update and delete functionality (CRUD completion)
+- Delete functionality (CRUD completion)
 - Data visualization (charts)
 
 ---
